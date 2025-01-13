@@ -28,7 +28,15 @@ export const MockOtpRepository = {
 			userId: 2
 		});
 	}),
-	findOneBy: jest.fn(userId => Promise.resolve(null)),
+	findOneBy: jest.fn()
+		.mockImplementationOnce(userId => Promise.resolve(null))
+		.mockImplementationOnce(userId => Promise.resolve({
+			id: 5,
+			code: '12345',
+			expires_in: new Date(Date.now() + 1000 * 60 * 4),
+			method: null,
+			userId: 2
+		})),
 	create: jest.fn(otpDate => otpDate),
 	save: jest.fn(otp => Promise.resolve({
 		...otp,
