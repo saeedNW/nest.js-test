@@ -63,7 +63,8 @@ export function objectSanitizer(
 			/** Remove the nested object if it is empty and not allowed to be nullable */
 			if (
 				Object.keys(data[key]).length === 0 &&
-				!nullableFields.includes(key)
+				!nullableFields.includes(key) &&
+				!(data[key] instanceof Date)
 			) {
 				delete data[key];
 			}
