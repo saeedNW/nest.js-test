@@ -1,6 +1,6 @@
 let findOneCallCount = 0;
 
-export const MockOtpRepository = {
+export const MockOtpRepository_AuthModule = {
 	findOne: jest.fn(whereOption => {
 		findOneCallCount++;
 		if (findOneCallCount === 2) {

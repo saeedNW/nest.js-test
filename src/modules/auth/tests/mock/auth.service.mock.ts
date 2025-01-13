@@ -1,4 +1,4 @@
-export const MockAuthService = {
+export const MockAuthService_AuthModule = {
 	sendOtp: jest.fn(dto => {
 		return { code: "32313" }
 	}),

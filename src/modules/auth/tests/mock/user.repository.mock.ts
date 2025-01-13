@@ -1,6 +1,6 @@
 let findOneByCallCount = 0;
 
-export const MockUserRepository = {
+export const MockUserRepository_AuthModule = {
 	findOneBy: jest.fn((criteria) => {
 		findOneByCallCount++;
 		if (findOneByCallCount === 1) {

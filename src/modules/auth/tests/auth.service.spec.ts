@@ -4,9 +4,9 @@ import { getRepositoryToken } from '@nestjs/typeorm';
 import { UserEntity } from 'src/modules/user/entities/user.entity';
 import { OtpEntity } from 'src/modules/user/entities/otp.entity';
 import { TokenService } from '../token.service';
-import { MockUserRepository } from './mock/user.repository.mock';
-import { MockOtpRepository } from './mock/otp.repository.mock';
-import { MockTokenService } from './mock/token.service.mock';
+import { MockUserRepository_AuthModule as MockUserRepository } from './mock/user.repository.mock';
+import { MockOtpRepository_AuthModule as MockOtpRepository } from './mock/otp.repository.mock';
+import { MockTokenService_AuthModule as MockTokenService } from './mock/token.service.mock';
 import { UnauthorizedException } from '@nestjs/common';
 
 describe('AuthService', () => {
